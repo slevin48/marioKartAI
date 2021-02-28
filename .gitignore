@@ -127,3 +127,18 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Project specific
+BizHawk-2.6.1
+BizHawk-1.12.2.zip
+Super Mario World
+SuperMarioKart.zip
+SuperMarioKart.smc
+Mario Kart 64 (USA).zip
+MarioKart64.n64
+MariFlow.zip
+MariFlow
+MarIQ.zip
+MarIQ
+QLearning
+NEATmk64.lua
