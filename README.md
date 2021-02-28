@@ -1,9 +1,9 @@
 # marioKartAI
 AI plays Mario Kart
 
-![Super Mario Kart](img/Mario+Kart+64.jpg)
+![cm_play](img/cm_play.gif)
 
-<!-- ![controller](controller.png) -->
+<!-- ![controller](img/controller_n64.png) -->
 
 ## Record
 
@@ -58,6 +58,16 @@ To solve it:
 
 `OSError: failed to open clipboard`
 
+Solved by replacing `im = ImageGrab.grabclipboard()` line 38 of [Play.lua](https://github.com/rameshvarun/NeuralKart/blob/master/Play.lua) 
+with `try ... except`:
+
+```
+try:
+    im = ImageGrab.grabclipboard()
+except:
+    print("failed to open clipboard")
+```
+
 ![error_clipboard](img/error_clipboard.png)
 
 ## Sources
@@ -75,3 +85,7 @@ To solve it:
 * [MarIQ](https://sethbling.s3-us-west-2.amazonaws.com/Downloads/MarIQ.zip)
     * [download](https://sethbling.s3-us-west-2.amazonaws.com/Downloads/MarIQ.zip)
     * [doc](https://docs.google.com/document/d/1uxzeSMqj56YGWh8LkzfNriuGvA3aWU3olg-MSCgWuSI/edit)
+
+
+
+![Super Mario Kart](img/Mario+Kart+64.jpg)
