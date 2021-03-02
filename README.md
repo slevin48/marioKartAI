@@ -42,6 +42,23 @@ The Deep Learning model used is the one from NVIDIA in this famous [paper](https
 
 Almost there... WIP
 
+### Joystick control / emulator
+* [Pygame tuto #user-input](https://realpython.com/pygame-a-primer/#user-input)
+* [pygame.joystick](https://www.pygame.org/docs/ref/joystick.html)
+* [pygame.key](https://www.pygame.org/docs/ref/key.html)
+* [joystick](https://pypi.org/project/joystick/): Real-time plotting and logging while console controlling
+* [PYXInput](https://github.com/bayangan1991/PYXInput): emulating xbox controllers on Windows as well as reading the state of controllers using standard xinput (MIT License)
+
+
+[Simulate XBox Controller Input with Python](https://stackoverflow.com/questions/43483121/simulate-xbox-controller-input-with-python)
+
+* [vJoy](http://vjoystick.sourceforge.net/site/): SDK and driver to simulate input devices
+* [pyVJoy](https://github.com/tidzo/pyvjoy): access these drivers and simulate the input inside python
+* [x360ce](https://www.x360ce.com/) xbox 360 controller emulation
+
+Example: [pygta/vjoy-testing](https://github.com/Sentdex/pygta5/tree/master/vjoy-testing)
+
+
 ### h5py error
 
 Apparently h5py >= 3 results in the [following problem](https://github.com/tensorflow/tensorflow/issues/44467)([stackoverflow thread](https://stackoverflow.com/questions/53740577/does-any-one-got-attributeerror-str-object-has-no-attribute-decode-whi)):
