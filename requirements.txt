@@ -1,0 +1,10 @@
+inputs
+mss
+matplotlib==3.2
+numpy
+scikit-image
+termcolor
+keras
+h5py
+tensorflow-gpu
+Pillow

@@ -5,6 +5,19 @@ AI plays Mario Kart
 
 <!-- ![controller](img/controller_n64.png) -->
 
+Inspired by [TensorKart](https://github.com/kevinhughes27/TensorKart)
+
+Scripts:
+- [record.py](scripts/record.py)
+- [utils.py](scripts/utils.py)
+    - load_sample
+    - viewer
+    - prepare
+    - ...
+- [train.py](scripts/train.py)
+- [play.py](scripts/play.py)
+- [debugging.ipynb](scripts/debugging.ipynb)
+
 ## Record
 
 Define `OFFSET_Y = 60` in `utils.py`
