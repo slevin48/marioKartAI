@@ -1,6 +1,8 @@
 # marioKartAI
 AI plays Mario Kart
 
+The full training workflow in [marioKartAI.ipynb](marioKartAI.ipynb) is based on [behavioural-cloning](https://github.com/slevin48/behavioural-cloning)
+
 ![cm_play](img/cm_play.gif)
 
 <!-- ![controller](img/controller_n64.png) -->
@@ -32,7 +34,7 @@ Run `python utils.py viewer samples` to view the samples (stored at the root of 
 
 ![tensorkart_viewer](img/tensorkart_viewer.png)
 
-## Train AI
+## Prepare
 
 Run `python utils.py prepare samples/*` with an array of sample directories to build an `X` and `y` matrix for training. (zsh will expand samples/* to all the directories. Passing a glob directly also works)
 
@@ -48,8 +50,16 @@ Run `python utils.py prepare samples/*` with an array of sample directories to b
   [4] button rb
 ```
 
+## Train AI
+
 The Deep Learning model used is the one from NVIDIA in this famous [paper](https://arxiv.org/pdf/1604.07316.pdf) from 2016:
 ![nvidia_network](img/nvidia_network.png)
+
+The `train.py` program will train a model using Google's TensorFlow framework and cuDNN for GPU acceleration. 
+
+It takes ~1 min to train 474 samples on 30 epochs (~3 mins for 100 epochs)
+
+![model_100epochs](img/model_100epochs.png)
 
 ## AI Playing
 
