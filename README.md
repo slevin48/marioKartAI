@@ -65,6 +65,10 @@ It takes ~1 min to train 474 samples on 30 epochs (~3 mins for 100 epochs)
 
 Almost there... WIP
 
+![failure](img\marioKartAI.gif)
+
+Leveraging **NeuralKart** [Play.lua](play/Play.lua) script and [predict-server.py](play/predict-server.py) for inference
+
 ### Joystick control / emulator
 * [Pygame tuto #user-input](https://realpython.com/pygame-a-primer/#user-input)
 * [pygame.joystick](https://www.pygame.org/docs/ref/joystick.html)
