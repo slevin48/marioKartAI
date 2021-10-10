@@ -5,7 +5,7 @@ AI plays Mario Kart
 
 <!-- ![controller](img/controller_n64.png) -->
 
-Inspired by [TensorKart](https://github.com/kevinhughes27/TensorKart)
+Inspired by [TensorKart](https://github.com/kevinhughes27/TensorKart) for training and [NeuralKart](https://github.com/rameshvarun/NeuralKart) for inference while playing
 
 Scripts:
 - [record.py](scripts/record.py)

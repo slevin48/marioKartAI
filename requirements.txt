@@ -1,10 +1,15 @@
 inputs
 mss
-matplotlib==3.2
+matplotlib
+# matplotlib==3.2
 numpy
 scikit-image
 termcolor
 keras
 h5py
+# h5py==2.10.0
 tensorflow-gpu
 Pillow
+pandas
+ipykernel
+scikit-learn
