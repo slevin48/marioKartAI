@@ -26,6 +26,8 @@ Define `OFFSET_Y = 60` in `utils.py`
 
 ![record_samples](img/record_samples.png)
 
+Use [DS4windows.exe](http://ds4windows.com/) to recognize PS4 controller as Xbox controller on Windows
+
 ## Viewer
 
 [TensorKart](https://github.com/kevinhughes27/TensorKart) viewer

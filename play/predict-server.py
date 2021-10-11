@@ -84,7 +84,7 @@ if __name__ == "__main__":
     logger.info("Loading model...")
     model = create_model(keep_prob=1)
     
-    model.load_weights('models/model_weights_2021-02-27-1_100epochs.h5')
+    model.load_weights('models/model_weights_2021-10-11-1_100epochs.h5')
 
     logger.info("Starting server...")
     server = TCPServer(('0.0.0.0', 36296), TCPHandler)
