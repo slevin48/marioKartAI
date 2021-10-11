@@ -13,3 +13,4 @@ Pillow
 pandas
 ipykernel
 scikit-learn
+opencv-python
