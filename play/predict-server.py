@@ -1,4 +1,5 @@
 import sys, time, logging, os, argparse
+import cv2
 
 import numpy as np
 from PIL import Image, ImageGrab
@@ -50,9 +51,12 @@ def create_model(keep_prob = 0.8):
 
 
 def prepare_image(im):
-    im = im.resize((INPUT_WIDTH, INPUT_HEIGHT))
+    im = im.resize((640, 480))
     im_arr = np.frombuffer(im.tobytes(), dtype=np.uint8)
-    im_arr = im_arr.reshape((INPUT_HEIGHT, INPUT_WIDTH, INPUT_CHANNELS))
+    im_arr = im_arr.reshape((480, 640, 3))
+    im_arr = im_arr[100:480,:,:]
+    im_arr = cv2.resize(im_arr, (200,66))
+    im_arr = cv2.cvtColor(im_arr, cv2.COLOR_RGB2YUV)
     im_arr = np.expand_dims(im_arr, axis=0)
     return im_arr
 
@@ -69,16 +73,20 @@ class TCPHandler(StreamRequestHandler):
                     im = ImageGrab.grabclipboard()
                 except:
                     print("failed to open clipboard")
-                if im != None:
-                    prediction = model.predict(prepare_image(im), batch_size=1)[0]
-                    self.wfile.write((str(prediction[0]) + "\n").encode('utf-8'))
-                else:
-                    self.wfile.write("PREDICTIONERROR\n".encode('utf-8'))
-
-            if message.startswith("PREDICT:"):
-                im = Image.open(message[8:])
+                # if im != None:
                 prediction = model.predict(prepare_image(im), batch_size=1)[0]
+                print(prediction)
                 self.wfile.write((str(prediction[0]) + "\n").encode('utf-8'))
+                # else:
+                    # self.wfile.write("PREDICTIONERROR\n".encode('utf-8'))
+
+            # if message.startswith("PREDICT:"):
+            #     print(message[8:])
+            #     im = Image.open(message[8:])
+            #     np.save("img_open.npy",im)
+            #     prediction = model.predict(prepare_image(im), batch_size=1)[0]
+            #     print(prediction)
+            #     self.wfile.write((str(prediction[0]) + "\n").encode('utf-8'))
 
 if __name__ == "__main__":
     logger.info("Loading model...")
